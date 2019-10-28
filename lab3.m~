@@ -1,0 +1,11 @@
+numc = [4 3];
+denc = [1 0 3.5 -4 2 6];
+
+[numd,dend] = c2dm(numc,denc,0.05,'zoh');
+
+[y] = dstep(numd,dend,200+1);
+
+x = 0:0.05:0.05*200;
+
+stairs(x,y)
+gt
